@@ -18,7 +18,9 @@ function writePackageJSON(content) {
 }
 
 function readAppJSON() {
-  return JSON.parse(fs.readFileSync('./app.json'));
+  let test = JSON.parse(fs.readFileSync('./app.json'));
+  console.log("APP JSON TEST: ", test);
+  return test;
 }
 
 function writeAppJSON(content) {

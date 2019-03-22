@@ -11,10 +11,10 @@ module.exports = function postDeploy() {
   log('QR Code URL ', qrUrl);
 
   const body = `
-  :shipit: This branch has been deployed to:
+  This branch has been deployed to:
   ${expUrl}
 
-  Download the [Expo](https://expo.io/) app and scan this QR code to get started!
+  Install the [Expo](https://expo.io/) app and scan this QR code with your camera:
 
   ![QR Code](${qrUrl})
   `;
