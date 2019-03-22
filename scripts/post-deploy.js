@@ -3,7 +3,7 @@ const utils = require('./utils');
 const config = require('./config');
 const log = require('./log');
 module.exports = function postDeploy() {
-  const expUrl = `https://expo.io/@${config.expUsername}/${utils.readAppSON().expo.slug}?release-channel=${utils.getExpChannelName()}`;
+  const expUrl = `https://expo.io/@${config.expUsername}/${utils.readAppJSON().expo.slug}?release-channel=${utils.getExpChannelName()}`;
   const expUrlForQRCode = `https://exp.host/@${config.expUsername}/${utils.readAppJSON().expo.slug}?release-channel=${utils.getExpChannelName()}`;
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${expUrlForQRCode}`;
 
