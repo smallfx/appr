@@ -6,7 +6,7 @@ const log = require('./scripts/log');
 const preDeploy = require('./scripts/pre-deploy');
 const postDeploy = require('./scripts/post-deploy');
 const getExpChannelName = require('./scripts/utils').getExpChannelName;
-const localExp = './node_modules/exp/bin/exp.js';
+const localExp = 'expo-cli';
 log('Logging into Expo...');
 spawn(localExp, ['login', '-u', config.expUsername, '-p', config.expPassword, '--non-interactive'], loginError => {
   if (loginError) {
